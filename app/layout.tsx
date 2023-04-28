@@ -8,7 +8,7 @@ const buildConfig = getBuildConfig();
 
 export const metadata = {
   title: "玉玄道精灵",
-  description: "Your personal ChatGPT Chat Bot.",
+  description: "弘扬民族文化，胸怀大义精神.",
   appleWebApp: {
     title: "玉玄道精灵",
     statusBarStyle: "default",
