@@ -86,8 +86,21 @@
     @include dark;
   }
 }
+
+@font-face {
+  font-family: 'chatgpt';
+  /* 字体名自定义即可 */
+  /* src: url('https://cdn.jsdelivr.net/gh/tzy13755126023/BLOG_SOURCE/font/ZhuZiAWan.woff2'); */
+  src: url('https://npm.elemecdn.com/ethan4116-blog/lib/font/ZhuZiAWan.ttf');
+  /* 字体文件路径 */
+  font-display: swap;
+}
+
 html {
   height: var(--full-height);
+
+  font-family:  "chatgpt","Noto Sans SC", "SF Pro SC", "SF Pro Text", "SF Pro Icons",
+    "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 body {
@@ -102,8 +115,6 @@ body {
   align-items: center;
   user-select: none;
   touch-action: pan-x pan-y;
-  font-family: "Noto Sans SC", "SF Pro SC", "SF Pro Text", "SF Pro Icons",
-    "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 
   @media only screen and (max-width: 600px) {
     background-color: var(--second);
@@ -247,6 +258,10 @@ div.math {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 600px) {
+    align-items: flex-end;
+  }
 }
 
 .link {
