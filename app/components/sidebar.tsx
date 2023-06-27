@@ -39,13 +39,10 @@ function useHotKey() {
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.metaKey || e.altKey || e.ctrlKey) {
-        const n = chatStore.sessions.length;
-        const limit = (x: number) => (x + n) % n;
-        const i = chatStore.currentSessionIndex;
         if (e.key === "ArrowUp") {
-          chatStore.selectSession(limit(i - 1));
+          chatStore.nextSession(-1);
         } else if (e.key === "ArrowDown") {
-          chatStore.selectSession(limit(i + 1));
+          chatStore.nextSession(1);
         }
       }
     };
@@ -119,8 +116,10 @@ export function SideBar(props: { className?: string }) {
         shouldNarrow && styles["narrow-sidebar"]
       }`}
     >
-      <div className={styles["sidebar-header"]}>
-        <div className={styles["sidebar-title"]}>玉玄道精灵</div>
+      <div className={styles["sidebar-header"]} data-tauri-drag-region>
+        <div className={styles["sidebar-title"]} data-tauri-drag-region>
+          玉玄道精灵
+        </div>
         <div className={styles["sidebar-sub-title"]}>
           弘扬民族文化，胸怀大义精神.
         </div>
