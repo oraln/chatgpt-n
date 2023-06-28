@@ -437,9 +437,9 @@ export function ImagePreviewer(props: {
           </div>
 
           <div>
-            <div className={styles["main-title"]}>ChatGPT Next</div>
+            <div className={styles["main-title"]}>玉玄道精灵</div>
             <div className={styles["sub-title"]}>
-              Build your own AI assistant.
+              弘扬民族文化，胸怀大义精神.
             </div>
             <div className={styles["icons"]}>
               <ExportAvatar avatar={config.avatar} />
